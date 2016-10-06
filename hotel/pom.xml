@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>hu.uni.miskoc.iit.webtech.hotel</groupId>
+  <artifactId>hotel</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Hotel Manager Application</name>
+  <description>Example for Web Technologies and Software Engineering subjects</description>
+  <modules>
+  	<module>hotel-util</module>
+  	<module>hotel-model</module>
+  	<module>hotel-persist</module>
+  	<module>hotel-persist-mysql</module>
+  	<module>hotel-service</module>
+  	<module>hotel-service-impl</module>
+  	<module>hotel-controller</module>
+  	<module>hotel-web</module>
+  </modules>
+</project>
