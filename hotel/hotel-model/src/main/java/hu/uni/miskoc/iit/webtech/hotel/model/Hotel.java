@@ -30,6 +30,7 @@ public class Hotel {
 		this.name = name;
 		this.adr = adr;
 		this.rooms = rooms;
+		
 	}
 
 	public int getHotelID() {

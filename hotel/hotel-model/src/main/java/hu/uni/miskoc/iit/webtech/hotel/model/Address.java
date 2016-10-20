@@ -1,56 +1,62 @@
 package hu.uni.miskoc.iit.webtech.hotel.model;
 
 public class Address {
-	private String country;
-	private String City;
-	private String PostalCode;
-	private String Street;
-	private String HouseNo;
-	private String PhoneNo;
-	public Address(String country, String city, String postalCode, String street, String houseNo, String phoneNo) {
+
+	private Country country;
+	private String city;
+	private String postalCode;
+	private String street;
+	private String houseNo;
+	private String phoneNo;
+	public Address(Country country, String city, String postalCode, String street, String houseNo, String phoneNo) {
 		super();
 		this.country = country;
-		City = city;
-		PostalCode = postalCode;
-		Street = street;
-		HouseNo = houseNo;
-		PhoneNo = phoneNo;
+		this.city = city;
+		this.postalCode = postalCode;
+		this.street = street;
+		this.houseNo = houseNo;
+		this.phoneNo = phoneNo;
 	}
-	public String getCountry() {
+	public Country getCountry() {
 		return country;
 	}
-	public void setCountry(String country) {
+	public void setCountry(Country country) {
 		this.country = country;
 	}
 	public String getCity() {
-		return City;
+		return city;
 	}
 	public void setCity(String city) {
-		City = city;
+		this.city = city;
 	}
 	public String getPostalCode() {
-		return PostalCode;
+		return postalCode;
 	}
 	public void setPostalCode(String postalCode) {
-		PostalCode = postalCode;
+		this.postalCode = postalCode;
 	}
 	public String getStreet() {
-		return Street;
+		return street;
 	}
 	public void setStreet(String street) {
-		Street = street;
+		this.street = street;
 	}
 	public String getHouseNo() {
-		return HouseNo;
+		return houseNo;
 	}
 	public void setHouseNo(String houseNo) {
-		HouseNo = houseNo;
+		this.houseNo = houseNo;
 	}
 	public String getPhoneNo() {
-		return PhoneNo;
+		return phoneNo;
 	}
 	public void setPhoneNo(String phoneNo) {
-		PhoneNo = phoneNo;
+		this.phoneNo = phoneNo;
 	}
+	
+	
+	
+	
+	
 
 }
