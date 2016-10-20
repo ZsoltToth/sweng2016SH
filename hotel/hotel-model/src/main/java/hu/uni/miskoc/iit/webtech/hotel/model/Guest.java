@@ -4,22 +4,17 @@ public class Guest {
 
 	private String guestID;
 	private String name;
-	private String city;
-	private String address;
 	private String creditCardInfo;
-	private int mobileNumber;
 	private String emailAddress;
-	
-	public Guest(String guestID, String name, String city, String address, String creditCardInfo, int mobileNumber,
-			String emailAddress) {
+	private Address address;
+
+	public Guest(String guestID, String name, String creditCardInfo, String emailAddress, Address address) {
 		super();
 		this.guestID = guestID;
 		this.name = name;
-		this.city = city;
-		this.address = address;
 		this.creditCardInfo = creditCardInfo;
-		this.mobileNumber = mobileNumber;
 		this.emailAddress = emailAddress;
+		this.address = address;
 	}
 
 	public String getGuestID() {
@@ -38,36 +33,12 @@ public class Guest {
 		this.name = name;
 	}
 
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
 	public String getCreditCardInfo() {
 		return creditCardInfo;
 	}
 
 	public void setCreditCardInfo(String creditCardInfo) {
 		this.creditCardInfo = creditCardInfo;
-	}
-
-	public int getMobileNumber() {
-		return mobileNumber;
-	}
-
-	public void setMobileNumber(int mobileNumber) {
-		this.mobileNumber = mobileNumber;
 	}
 
 	public String getEmailAddress() {
@@ -77,6 +48,15 @@ public class Guest {
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
 	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 	
 	
+
 }
