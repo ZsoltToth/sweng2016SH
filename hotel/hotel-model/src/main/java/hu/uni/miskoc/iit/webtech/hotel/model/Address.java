@@ -3,12 +3,12 @@ package hu.uni.miskoc.iit.webtech.hotel.model;
 public class Address {
 
 	private Country country;
-	private String city;
+	private City city;
 	private String postalCode;
 	private String street;
 	private String houseNo;
 	private String phoneNo;
-	public Address(Country country, String city, String postalCode, String street, String houseNo, String phoneNo) {
+	public Address(Country country, City city, String postalCode, String street, String houseNo, String phoneNo) {
 		super();
 		this.country = country;
 		this.city = city;
@@ -23,10 +23,10 @@ public class Address {
 	public void setCountry(Country country) {
 		this.country = country;
 	}
-	public String getCity() {
+	public City getCity() {
 		return city;
 	}
-	public void setCity(String city) {
+	public void setCity(City city) {
 		this.city = city;
 	}
 	public String getPostalCode() {
@@ -54,9 +54,4 @@ public class Address {
 		this.phoneNo = phoneNo;
 	}
 	
-	
-	
-	
-	
-
 }
