@@ -18,7 +18,7 @@ public class ExchangeService {
 
 
 		public Money exchange(Money currentDevisa, Currency targetCurrency){
-			return new Money(0, Currency.HUF);
+			return new Money(0, Currency.HyeUF);
 		}
 		 Map<Currency, Double> c = new HashMap<Currency, Double>();
 }
