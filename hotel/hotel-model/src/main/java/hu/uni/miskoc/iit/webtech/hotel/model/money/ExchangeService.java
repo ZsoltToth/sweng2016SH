@@ -18,7 +18,8 @@ public class ExchangeService {
 
 
 		public Money exchange(Money currentDevisa, Currency targetCurrency){
-			return new Money(0, Currency.HyeUF);
+			double ratio = exchangeRatios.get(currentDevisa.getCurrency()).get(targetCurrency);
+			return new Money(ratio * currentDevisa.getAmount(), targetCurrency);
 		}
-		 Map<Currency, Double> c = new HashMap<Currency, Double>();
+		 
 }
