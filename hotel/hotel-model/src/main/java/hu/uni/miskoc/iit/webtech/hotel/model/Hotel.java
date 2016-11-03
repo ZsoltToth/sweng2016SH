@@ -8,6 +8,53 @@ public class Hotel {
 	private String name;
 	 private Address address;
 	 private double hotelRating;
+	 private int totalRooms;
+	 private double sumroomRatings;
+	 
+	 
+	public Hotel(int hotelID, String name, Address address, double hotelRating, int totalRooms, double sumroomRatings,
+			Map<String, Room> rooms) {
+		super();
+		this.hotelID = hotelID;
+		this.name = name;
+		this.address = address;
+		this.hotelRating = hotelRating;
+		this.totalRooms = totalRooms;
+		this.sumroomRatings = sumroomRatings;
+		this.rooms = rooms;
+	}
+
+
+	public double getSumroomRatings() {
+		return sumroomRatings;
+	}
+
+
+	public void setSumroomRatings(double sumroomRatings) {
+		this.sumroomRatings = sumroomRatings;
+	}
+
+
+	public Address getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+
+	public int getTotalRooms() {
+		return totalRooms;
+	}
+
+
+	public void setTotalRooms(int totalRooms) {
+		this.totalRooms = totalRooms;
+	}
+
+
 	Map<String, Room> rooms;
 
 	
@@ -23,15 +70,7 @@ public class Hotel {
 	}
 
 
-	public Hotel(int hotelID, String name, Address address, double hotelRating, Map<String, Room> rooms) {
-		super();
-		this.hotelID = hotelID;
-		this.name = name;
-		this.address = address;
-		this.hotelRating = hotelRating;
-		this.rooms = rooms;
-	}
-
+	
 
 	public int getHotelID() {
 		return hotelID;
@@ -69,7 +108,8 @@ public class Hotel {
 
 
 	public void setHotelRating(double hotelRating) {
-		this.hotelRating = hotelRating;
+		
+		
 	}
 
 
