@@ -6,7 +6,7 @@ public class Hotel {
 
 	private int hotelID;
 	private String name;
-	 private Address adr;
+	 private Address address;
 	 private double hotelRating;
 	Map<String, Room> rooms;
 
@@ -23,11 +23,11 @@ public class Hotel {
 	}
 
 
-	public Hotel(int hotelID, String name, Address adr, double hotelRating, Map<String, Room> rooms) {
+	public Hotel(int hotelID, String name, Address address, double hotelRating, Map<String, Room> rooms) {
 		super();
 		this.hotelID = hotelID;
 		this.name = name;
-		this.adr = adr;
+		this.address = address;
 		this.hotelRating = hotelRating;
 		this.rooms = rooms;
 	}
@@ -54,12 +54,12 @@ public class Hotel {
 
 
 	public Address getAdr() {
-		return adr;
+		return address;
 	}
 
 
 	public void setAdr(Address adr) {
-		this.adr = adr;
+		this.address = adr;
 	}
 
 
