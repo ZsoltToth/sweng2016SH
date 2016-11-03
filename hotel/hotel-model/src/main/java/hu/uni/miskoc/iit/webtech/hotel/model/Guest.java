@@ -1,5 +1,6 @@
 package hu.uni.miskoc.iit.webtech.hotel.model;
 
+
 public class Guest {
 
 	private String guestID;
@@ -7,6 +8,7 @@ public class Guest {
 	private String creditCardInfo;
 	private String emailAddress;
 	private Address address;
+
 
 	public Guest(String guestID, String name, String creditCardInfo, String emailAddress, Address address) {
 		super();
