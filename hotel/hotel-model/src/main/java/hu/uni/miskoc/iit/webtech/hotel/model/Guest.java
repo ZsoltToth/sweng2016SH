@@ -8,19 +8,46 @@ public class Guest {
 	private String creditCardInfo;
 	private String emailAddress;
 	private Address address;
+	private String mobileNo;
+	private String phoneNo;
 
+<<<<<<< HEAD
 
 	public Guest(String guestID, String name, String creditCardInfo, String emailAddress, Address address) {
+=======
+				
+
+	public Guest(String guestID, String name, String creditCardInfo, String emailAddress, Address address,
+			String mobileNo, String phoneNo) {
+>>>>>>> branch 'master' of https://github.com/ZsoltToth/sweng2016SH.git
 		super();
 		this.guestID = guestID;
 		this.name = name;
 		this.creditCardInfo = creditCardInfo;
 		this.emailAddress = emailAddress;
 		this.address = address;
+		this.mobileNo = mobileNo;
+		this.phoneNo = phoneNo;
 	}
 
 	public String getGuestID() {
 		return guestID;
+	}
+
+	public String getMobileNo() {
+		return mobileNo;
+	}
+
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+
+	public String getPhoneNo() {
+		return phoneNo;
+	}
+
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
 	}
 
 	public void setGuestID(String guestID) {
