@@ -1,6 +1,5 @@
 package hu.uni.miskoc.iit.webtech.hotel.model;
 
-
 public class Guest {
 
 	private String guestID;
@@ -11,15 +10,9 @@ public class Guest {
 	private String mobileNo;
 	private String phoneNo;
 
-<<<<<<< HEAD
-
-	public Guest(String guestID, String name, String creditCardInfo, String emailAddress, Address address) {
-=======
-				
-
 	public Guest(String guestID, String name, String creditCardInfo, String emailAddress, Address address,
 			String mobileNo, String phoneNo) {
->>>>>>> branch 'master' of https://github.com/ZsoltToth/sweng2016SH.git
+
 		super();
 		this.guestID = guestID;
 		this.name = name;
@@ -85,7 +78,5 @@ public class Guest {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	
-	
 
 }
