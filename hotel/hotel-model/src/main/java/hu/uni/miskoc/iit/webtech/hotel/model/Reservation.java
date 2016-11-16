@@ -1,5 +1,4 @@
-import hu.uni.miskoc.iit.webtech.hotel.model.Address;
-
+package hu.uni.miskoc.iit.webtech.hotel.model;
 public class Reservation {
 	private String guestName;
 	private String emailAddress;

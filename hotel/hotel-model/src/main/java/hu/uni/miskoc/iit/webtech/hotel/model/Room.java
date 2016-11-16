@@ -1,5 +1,7 @@
 package hu.uni.miskoc.iit.webtech.hotel.model;
 
+import hu.uni.miskoc.iit.webtech.hotel.model.money.Money;
+
 public class Room {
 
 	public enum RoomType {
@@ -15,10 +17,10 @@ public class Room {
 	private RoomStatus status;
 	private double roomQuality;
 	private double roomRating;
-	private double roomCost;
+	private Money roomCost;
 	
 	public Room(int roomNo, RoomType roomType, RoomStatus status, double roomQuality, double roomRating,
-			double roomCost) {
+			Money roomCost) {
 		super();
 		this.roomNo = roomNo;
 		this.roomType = roomType;
@@ -27,6 +29,8 @@ public class Room {
 		this.roomRating = roomRating;
 		this.roomCost = roomCost;
 	}
+
+
 
 	public int getRoomNo() {
 		return roomNo;
@@ -68,11 +72,11 @@ public class Room {
 		this.roomRating = roomRating;
 	}
 
-	public double getRoomCost() {
+	public Money getRoomCost() {
 		return roomCost;
 	}
 
-	public void setRoomCost(double roomCost) {
+	public void setRoomCost(Money roomCost) {
 		this.roomCost = roomCost;
 	}
 	

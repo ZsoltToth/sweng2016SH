@@ -1,5 +1,7 @@
 package hu.uni.miskoc.iit.webtech.hotel.model;
 
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Hotel {
@@ -10,10 +12,9 @@ public class Hotel {
 	 private double hotelRating;
 	 private int totalRooms;
 	 private double sumroomRatings;
+	 Map<String, Room> rooms;
 	 
-	 
-	public Hotel(int hotelID, String name, Address address, double hotelRating, int totalRooms, double sumroomRatings,
-			Map<String, Room> rooms) {
+	public Hotel(int hotelID, String name, Address address,	Map<String, Room> rooms) {
 		super();
 		this.hotelID = hotelID;
 		this.name = name;
@@ -55,7 +56,7 @@ public class Hotel {
 	}
 
 
-	Map<String, Room> rooms;
+	
 
 	
 
@@ -103,13 +104,23 @@ public class Hotel {
 
 
 	public double getHotelRating() {
-		return hotelRating;
+		double sum=0.0;
+		double rating;
+		//checking
+		Room r1;
+		for (String key: rooms.keySet()){
+			//sum=sum+rooms.getClass()
+			r1 = rooms.get(key);
+			sum = sum+ r1.getRoomRating();
+		}
+		rating = sum/rooms.size();
+	
+		return rating;
 	}
 
 
 	public void setHotelRating(double hotelRating) {
 		
-		//checking
 	}
 
 
