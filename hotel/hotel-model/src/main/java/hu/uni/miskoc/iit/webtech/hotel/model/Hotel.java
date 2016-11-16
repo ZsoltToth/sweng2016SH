@@ -109,7 +109,7 @@ public class Hotel {
 
 	public void setHotelRating(double hotelRating) {
 		
-		
+		//checking
 	}
 
 
