@@ -65,7 +65,10 @@ public class Room {
 	}
 
 	public double getRoomRating() {
-		return roomRating;
+		if(roomRating>5.0)
+			return 5.0;
+		else
+			return roomRating;
 	}
 
 	public void setRoomRating(double roomRating) {
