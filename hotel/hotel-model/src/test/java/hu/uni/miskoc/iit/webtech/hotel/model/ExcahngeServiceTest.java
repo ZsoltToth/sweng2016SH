@@ -41,7 +41,9 @@ public class ExcahngeServiceTest {
 		
 		
 		service = new ExchangeService(exchangeRatios);
-		if(currencyMap==null||currencyMap.size()>0){System.out.println("CurrencyMap is Null");}
+		if(currencyMap==null||currencyMap.size()<0){
+			System.out.println("CurrencyMap is Null");
+			}
 	}
 	
 	@Test
@@ -50,9 +52,12 @@ public class ExcahngeServiceTest {
 		Money money = new Money(100, Currency.USD);
 		Money expected = new Money(150, Currency.EUR);
 		Money actual = service.exchange(money, Currency.EUR);
-		// System.out.println(money);
-		//System.out.println(actual);
+		
+		if (money == expected) 
+	    System.out.println("Same currency no need to convert");
+		
 		assertEquals(expected, actual);
+		
 		  } catch (Exception e) {
 	            System.out.println(e.getMessage());
 	        }
