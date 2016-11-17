@@ -61,7 +61,7 @@ public class HotelRatingTest {
 		double expected = sum / 3.0;
 		double actual = hotel.getHotelRating();
 		assertEquals(expected, actual, 1e-4);
-		//ffff
+		
 	}
 
 }
