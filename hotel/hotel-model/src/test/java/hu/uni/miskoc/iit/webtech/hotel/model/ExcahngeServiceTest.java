@@ -39,34 +39,27 @@ public class ExcahngeServiceTest {
 		exchangeRatios.put(Currency.EUR, fromEURratios);
 		exchangeRatios.put(Currency.HUF, fromHUFratios);
 		
+		
 		service = new ExchangeService(exchangeRatios);
-		if(currencyMap==null||currencyMap.size()>0){System.out.println("CurrencyMap is Null");}
+		if(currencyMap==null||currencyMap.size()<0){
+			System.out.println("CurrencyMap is Null");
+			}
 	}
 	
 	@Test
 	public void testWithKnownRatios() {
+		try{
 		Money money = new Money(100, Currency.USD);
 		Money expected = new Money(150, Currency.EUR);
 		Money actual = service.exchange(money, Currency.EUR);
-		// System.out.println(money);
-		//System.out.println(actual);
+		
+		if (money == expected) 
+	    System.out.println("Same currency no need to convert");
+		
 		assertEquals(expected, actual);
+		
+		  } catch (Exception e) {
+	            System.out.println(e.getMessage());
+	        }
 	}
-	
-	@Test (expected=Exception.class)
-	public void testIfFromIsUnknown() {
-		Money money = new Money(100, Currency.EUR);
-		Money expected = new Money(150, Currency.EUR);
-		Money actual = service.exchange(money, Currency.EUR);
-		assertEquals(expected, actual);
-	}
-	
-	@Test(expected=Exception.class)
-	public void testIfToIsUnknown() {
-		Money money = new Money(100, Currency.EUR);
-		Money expected = new Money(150, Currency.EUR);
-		Money actual = service.exchange(money, Currency.EUR);
-		assertEquals(expected, actual);
-	}
-
 }

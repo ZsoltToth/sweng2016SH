@@ -29,10 +29,14 @@ public class ExchangeService {
 
 		public Money exchange(Money currentDevisa, Currency targetCurrency){
 			
-			double ratio = exchangeRatios.get(currentDevisa.getCurrency()).get(targetCurrency);
+			
+			
+			
+			Double ratio = exchangeRatios.get(currentDevisa.getCurrency()).get(targetCurrency);
 			
 			return new Money(ratio * currentDevisa.getAmount(), targetCurrency);
 		}
+		
 			
 			 
 		 
